@@ -1,7 +1,5 @@
 package gm.model;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Pizza {
@@ -12,7 +10,7 @@ public class Pizza {
     public Pizza(String size, String dough, List<String> toppings) {
         this.size = size;
         this.dough = dough;
-        this.toppings = Collections.unmodifiableList(new ArrayList<>(toppings));
+        this.toppings = List.copyOf(toppings);
     }
 
     public List<String> getToppings() {

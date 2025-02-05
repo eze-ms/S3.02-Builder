@@ -1,4 +1,6 @@
-package gm;
+package gm.builder;
+
+import gm.model.Pizza;
 
 import java.util.ArrayList;
 import java.util.Collections;

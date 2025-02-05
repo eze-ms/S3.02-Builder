@@ -1,4 +1,4 @@
-package gm;
+package gm.model;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,6 +13,10 @@ public class Pizza {
         this.size = size;
         this.dough = dough;
         this.toppings = Collections.unmodifiableList(new ArrayList<>(toppings));
+    }
+
+    public List<String> getToppings() {
+        return toppings;
     }
 
     @Override

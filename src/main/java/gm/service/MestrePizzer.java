@@ -1,4 +1,7 @@
-package gm;
+package gm.service;
+
+import gm.builder.PizzaBuilder;
+import gm.model.Pizza;
 
 public class MestrePizzer {
     private PizzaBuilder builder;

@@ -1,6 +1,8 @@
 package gm;
+
 public class Main {
     public static void main(String[] args) {
+<<<<<<< HEAD
         // Construyendo una pizza hawaiana
         System.out.println("Construyendo una pizza Hawaiana...");
         PizzaBuilder builder = new HawaiianPizzaBuilder().setSize("Large").setDough("Thin");
@@ -23,3 +25,9 @@ public class Main {
             System.out.println(vegetarianPizza);
         }
     }}
+=======
+        Menu menu = new Menu();
+        menu.mostrarMenu();
+    }
+}
+>>>>>>> 9c5c5eb (add menu y organización)

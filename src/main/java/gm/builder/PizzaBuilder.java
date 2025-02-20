@@ -8,5 +8,7 @@ public interface PizzaBuilder {
     PizzaBuilder setSize(String size);
     PizzaBuilder setDough(String dough);
     PizzaBuilder setToppings(List<String> toppings);
+    PizzaBuilder addToppings(List<String> toppings);
+
     Pizza build();
 }

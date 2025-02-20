@@ -88,7 +88,7 @@ public class Menu {
                 .filter(s -> !s.isEmpty())
                 .collect(Collectors.toList());
 
-        builder.setToppings(extraToppings);
+        builder.addToppings(extraToppings);
     }
 
     private void salir() {

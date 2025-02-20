@@ -45,6 +45,13 @@ public class VegetarianPizzaBuilder implements PizzaBuilder {
     }
 
     @Override
+    public PizzaBuilder addToppings(List<String> toppings) {
+        this.toppings.addAll(toppings);
+        return this;
+    }
+
+
+    @Override
     public Pizza build() {
         return new Pizza(size, dough, Collections.unmodifiableList(toppings));
     }

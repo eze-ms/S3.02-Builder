@@ -1,19 +1,31 @@
 # Proyecto Builder - Gestión de Pedidos de Pizza
 
 ## 📄 Descripción
-Este proyecto implementa el **patrón de diseño Builder** para gestionar pedidos de pizza, permitiendo la configuración personalizada de tamaño, masa e ingredientes. La clase `MestrePizzer` facilita la construcción de pizzas utilizando diferentes `PizzaBuilder`.
+Este proyecto implementa el **patrón de diseño Builder** para gestionar pedidos de pizza, permitiendo la configuración personalizada de **tamaño, masa e ingredientes**.
+
+### ✅ Características principales
+- **`PizzaBuilder` como clase interna de `Pizza`**: Sigue la estructura recomendada en el artículo del mentor.
+- **Gestión de pedidos con `MestrePizzer`**: Actúa como **servicio** para construir pizzas según la configuración del usuario.
+- **Menú interactivo (`Menu.java`)**: Permite seleccionar y personalizar pizzas mediante consola.
+- **Gestor de preparación (`GestorPizzas.java`)**: Separa la lógica de creación de pizzas del menú, aplicando el principio de responsabilidad única.
+- **Validación de entrada con `EntradaInvalidaException`**: Maneja errores y evita entradas incorrectas.
+
+---
 
 ## 🚀 Funcionalidad
-- **Construcción de pizzas paso a paso**: Se usa el patrón **Builder** para definir tamaño, masa e ingredientes.
-- **Diferentes tipos de pizzas**: Implementaciones como `HawaiianPizzaBuilder` y `VegetarianPizzaBuilder`.
-- **Gestor de construcción (`MestrePizzer`)**: Recibe un `PizzaBuilder` y construye pizzas según la configuración definida.
-- **Menú interactivo (`Menu.java`)**: Permite al usuario seleccionar y personalizar su pizza.
-- **Encadenamiento de métodos (`Fluent Builder`)**: Permite una configuración clara y concisa.
+- **Construcción de pizzas paso a paso**: El patrón **Builder** permite definir tamaño, masa e ingredientes de manera flexible.
+- **Menú interactivo**: El usuario puede seleccionar pizzas predefinidas o crear una personalizada.
+- **Validaciones robustas**: Se evita la entrada de valores inválidos en tamaño y tipo de masa.
+- **Fluent Builder**: Permite encadenar métodos para una configuración clara y concisa.
+
+---
 
 ## 💻 Tecnologías utilizadas
 - **Java 17**
-- **Maven** (para la gestión de dependencias y compilación)
-- **IDE recomendado**: IntelliJ IDEA o cualquier compatible con Java.
+- **Maven** (gestión de dependencias y compilación)
+- **IDE recomendado**: IntelliJ IDEA o cualquier compatible con Java
+
+---
 
 ## 📋 Requisitos
 - **Java Development Kit (JDK)**: Versión 17.

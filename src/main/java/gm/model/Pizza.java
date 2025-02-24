@@ -1,28 +1,56 @@
 package gm.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pizza {
-    private final String size;
-    private final String dough;
-    private final List<String> toppings;
+    private final String tamaño;
+    private final String masa;
+    private final List<String> ingredientes;
 
-    public Pizza(String size, String dough, List<String> toppings) {
-        this.size = size;
-        this.dough = dough;
-        this.toppings = List.copyOf(toppings);
+    private Pizza(PizzaBuilder builder) {
+        this.tamaño = builder.tamaño;
+        this.masa = builder.masa;
+        this.ingredientes = List.copyOf(builder.ingredientes);
     }
 
-    public List<String> getToppings() {
-        return toppings;
+    public static PizzaBuilder builder() {
+        return new PizzaBuilder();
     }
+
+    public static class PizzaBuilder {
+        private String tamaño = "Mediana";
+        private String masa = "Clásica";
+        private final List<String> ingredientes = new ArrayList<>();
+
+        public PizzaBuilder setTamaño(String tamaño) {
+            this.tamaño = tamaño;
+            return this;
+        }
+
+        public PizzaBuilder setMasa(String masa) {
+            this.masa = masa;
+            return this;
+        }
+
+        public PizzaBuilder agregarIngredientes(List<String> ingredientes) {
+            this.ingredientes.addAll(ingredientes);
+            return this;
+        }
+
+        public Pizza construir() {
+            return new Pizza(this);
+        }
+    }
+
 
     @Override
     public String toString() {
-        return "Pizza{" +
-                "\nsize='" + size + '\'' +
-                ",\ndough='" + dough + '\'' +
-                ",\ntoppings=" + toppings +
-                '}';
+        return """
+            Tamaño: %s
+            Masa: %s
+            Ingredientes: %s
+            """.formatted(tamaño, masa, String.join(", ", ingredientes));
     }
+
 }

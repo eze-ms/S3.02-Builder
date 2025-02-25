@@ -12,28 +12,22 @@ public class MestrePizzer {
         this.builder = builder;
     }
 
-    public Pizza prepararPizzaHawaiana(String tamaño, String masa) {
-        configurarBase(tamaño, masa);
-        builder.agregarIngredientes(List.of("piña", "queso", "jamón"));
-        System.out.println("Preparando Pizza Hawaiana...");
+    public Pizza prepararPizzaHawaiana(String size, String dough) {
+        builder.setSize(size).setDough(dough).addToppings(List.of("piña", "queso", "jamón"));
         return builder.construir();
     }
 
-    public Pizza prepararPizzaVegetariana(String tamaño, String masa) {
-        configurarBase(tamaño, masa);
-        builder.agregarIngredientes(List.of("champiñones", "pimientos", "cebolla", "aceitunas", "queso", "tomate"));
-        System.out.println("Preparando Pizza Vegetariana...");
+    public Pizza prepararPizzaVegetariana(String size, String dough) {
+        builder.setSize(size)
+                .setDough(dough)
+                .addToppings(List.of("champiñones", "pimientos", "cebolla", "aceitunas", "queso", "tomate"));
         return builder.construir();
     }
 
-    public Pizza configurarPizzaPersonalizada(String tamaño, String masa, List<String> ingredientes) {
-        configurarBase(tamaño, masa);
-        builder.agregarIngredientes(ingredientes);
+    public Pizza configurarPizzaPersonalizada(String size, String dough, List<String> toppings) {
+        builder.setSize(size)
+                .setDough(dough)
+                .addToppings(toppings);
         return builder.construir();
-    }
-
-    private void configurarBase(String tamaño, String masa) {
-        builder.setTamaño(tamaño);
-        builder.setMasa(masa);
     }
 }

@@ -3,21 +3,21 @@ package gm.model;
 import java.util.List;
 
 public class Pizza {
-    private final String tamaño;
-    private final String masa;
-    private final List<String> ingredientes;
+    private final String size;
+    private final String dough;
+    private final List<String> toppings;
 
-    public Pizza(String tamaño, String masa, List<String> ingredientes) {
-        this.tamaño = tamaño;
-        this.masa = masa;
-        this.ingredientes = List.copyOf(ingredientes);
+    public Pizza(String size, String dough, List<String> toppings) {
+        this.size = size;
+        this.dough = dough;
+        this.toppings = List.copyOf(toppings);
     }
 
     @Override
     public String toString() {
         return "\n Pizza creada:" +
-                "\n Tamaño: " + tamaño +
-                "\n Masa: " + masa +
-                "\n Ingredientes: " + ingredientes;
+                "\n Tamaño: " + size +
+                "\n Masa: " + dough +
+                "\n Ingredientes: " + toppings;
     }
 }

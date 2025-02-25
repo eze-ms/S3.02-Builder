@@ -5,30 +5,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PizzaBuilder implements Builder {
-    private String tamaño = "Mediana";
-    private String masa = "Clásica";
-    private final List<String> ingredientes = new ArrayList<>();
+    private String size = "Mediana";
+    private String dough = "Clásica";
+    private final List<String> toppings = new ArrayList<>();
 
     @Override
-    public PizzaBuilder setTamaño(String tamaño) {
-        this.tamaño = tamaño;
+    public PizzaBuilder setSize(String size) {
+        this.size = size;
         return this;
     }
 
     @Override
-    public PizzaBuilder setMasa(String masa) {
-        this.masa = masa;
+    public PizzaBuilder setDough(String dough) {
+        this.dough = dough;
         return this;
     }
 
     @Override
-    public PizzaBuilder agregarIngredientes(List<String> ingredientes) {
-        this.ingredientes.addAll(ingredientes);
+    public PizzaBuilder addToppings(List<String> toppings) {
+        this.toppings.addAll(toppings);
         return this;
     }
 
     @Override
     public Pizza construir() {
-        return new Pizza(tamaño, masa, ingredientes);
+        return new Pizza(size, dough, toppings);
     }
 }

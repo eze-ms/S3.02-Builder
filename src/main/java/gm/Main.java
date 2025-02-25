@@ -1,7 +1,6 @@
 package gm;
 
 import gm.controller.Menu;
-
 import java.util.Scanner;
 
 public class Main {

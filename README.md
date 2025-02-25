@@ -18,7 +18,7 @@ Este proyecto implementa el **patrón de diseño Builder** en **Java** para gest
 - **Encadenamiento fluido (`Fluent Builder`)**: Permite configurar las pizzas de forma clara y concisa con llamadas encadenadas.
 
 ---
-x
+
 ## 💻 Tecnologías utilizadas
 - **Java 17**
 - **Maven** (gestión de dependencias y compilación)

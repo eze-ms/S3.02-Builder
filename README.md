@@ -1,24 +1,24 @@
-# Proyecto Builder - Gestión de Pedidos de Pizza
+# 🍕 Proyecto Builder - Gestión de Pedidos de Pizza
 
 ## 📄 Descripción
-Este proyecto implementa el **patrón de diseño Builder** para gestionar pedidos de pizza, permitiendo la configuración personalizada de **tamaño, masa e ingredientes**.
+Este proyecto implementa el **patrón de diseño Builder** en **Java** para gestionar pedidos de pizza, permitiendo la configuración personalizada de **tamaño, masa e ingredientes**.
 
 ### ✅ Características principales
-- **Gestión de pedidos con `MestrePizzer`**: Actúa como **servicio** para construir pizzas según la configuración del usuario.
-- **Menú interactivo (`Menu.java`)**: Permite seleccionar y personalizar pizzas mediante consola.
-- **Gestor de preparación (`GestorPizzas.java`)**: Maneja la lógica de validación y construcción de pizzas.
-- **Validación de entrada con `EntradaInvalidaException`**: Maneja errores y evita entradas incorrectas.
+- **Gestor de construcción (`MestrePizzer`)**: Actúa como **Director**, organizando la construcción de pizzas predefinidas y personalizadas.
+- **Menú interactivo (`Menu.java`)**: Permite a los usuarios seleccionar y personalizar pizzas desde la consola.
+- **Constructor flexible (`PizzaBuilder`)**: Implementa la interfaz `Builder` y permite la creación fluida de pizzas.
+- **Validación de entrada**: Se evita la introducción de valores inválidos para el tamaño y la masa.
 
 ---
 
 ## 🚀 Funcionalidad
-- **Construcción de pizzas paso a paso**: El patrón **Builder** permite definir tamaño, masa e ingredientes de manera flexible.
-- **Menú interactivo**: El usuario puede seleccionar pizzas predefinidas o crear una personalizada.
-- **Validaciones robustas**: Se evita la entrada de valores inválidos en tamaño y tipo de masa.
-- **Fluent Builder**: Permite encadenar métodos para una configuración clara y concisa.
+- **Construcción de pizzas paso a paso**: Se utiliza el **patrón Builder** para definir **tamaño, masa e ingredientes** de manera estructurada.  
+- **Menú interactivo**: El usuario puede elegir entre pizzas predefinidas (**Hawaiana**, **Vegetariana**) o crear una personalizada.  
+- **Uso de `MestrePizzer` como Director**: Se encarga de coordinar la construcción de las pizzas mediante `PizzaBuilder`.  
+- **Encadenamiento fluido (`Fluent Builder`)**: Permite configurar las pizzas de forma clara y concisa con llamadas encadenadas.
 
 ---
-
+x
 ## 💻 Tecnologías utilizadas
 - **Java 17**
 - **Maven** (gestión de dependencias y compilación)
